@@ -1,0 +1,39 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-item a {
+  color: #c0c7c9;
+}
+
+#header-links a {
+  color: #575757;
+  font-family: "Poppins", sans-serif;
+}
+#header-links a:hover {
+  color: #ea809e;
+  transform: scale(1.1);
+}
+
+#sign-login a {
+  color: #575757;
+  font-family: "Poppins", sans-serif;
+}
+
+#sign-login a:hover {
+  color: #ea809e;
+  transform: scale(1.1);
+}
+
+#cus-table th {
+  background-color: #f390ac;
+  color: #000000;
+}
+
+#table {
+  font-family: "Poppins", sans-serif;
+}
+
+#content-box {
+  background-color: #b6b6b6;
+}
