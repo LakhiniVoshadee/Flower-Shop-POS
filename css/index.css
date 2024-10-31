@@ -26,7 +26,7 @@ body {
 }
 
 #cus-table th {
-  background-color: #f390ac;
+  background-color: #b6b6b6;
   color: #000000;
 }
 
@@ -36,4 +36,35 @@ body {
 
 #content-box {
   background-color: #b6b6b6;
+}
+
+#topic {
+  background-color: #f2f3f3;
+}
+
+#btn button {
+  font-family: "Poppins", sans-serif;
+  font-size: bold;
+  color: #474747;
+  background-color: #b6b6b6;
+}
+
+#btn button:hover {
+  background-color: #ea809e;
+  color: white;
+  transform: scale(1.1);
+}
+
+#sub-btn button {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #ea809e;
+}
+
+#sub-btn button:hover {
+  background-color: #ea809ec9;
+}
+
+#c-tb tr td {
+  color: #474747;
 }

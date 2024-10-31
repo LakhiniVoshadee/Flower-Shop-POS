@@ -85,21 +85,175 @@
       </header>
       <main>
         <div style="margin-top: 100px">
-          <h1 class="text-light-emphasis text-center">Customers</h1>
           <div
             class="container p-3 mb-2 bg-body-tertiary shadow p-3 mb-5 bg-body-tertiary rounded"
             id="content-box"
           >
+            <div class="accordion">
+              <div class="accordion-item rounded-bottom-3" id="topic">
+                <h2 class="text-light-emphasis text-center">Manage Customer</h2>
+                <div class="accordion-collapse collapse show">
+                  <div class="container-fluid">
+                    <div class="row w-100 justify-content-center mx-auto mt-4">
+                      <div class="col-10 col-sm-5 mb-3 mt-3 mx-lg-2">
+                        <label for="c_inputCustId" class="form-label"
+                          >Customer ID:</label
+                        >
+                        <input
+                          class="form-control border-1 rounded-2"
+                          type="text"
+                          id="c_inputCustId"
+                          placeholder
+                          style="border: 2px solid green"
+                        />
+
+                        <label
+                          class="text-danger mt-3 err-label"
+                          style="font-size: 12px; display: none"
+                          >Error</label
+                        >
+                      </div>
+                      <div class="col-10 col-sm-5 mb-3 mt-3 mx-lg-2">
+                        <label for="c_inputCustId" class="form-label"
+                          >Customer Name:</label
+                        >
+                        <input
+                          class="form-control border-1 rounded-2"
+                          type="text"
+                          id="c_inputCustId"
+                          placeholder
+                          style="border: 2px solid green"
+                        />
+
+                        <label
+                          class="text-danger mt-3 err-label"
+                          style="font-size: 12px; display: none"
+                          >Error</label
+                        >
+                      </div>
+                      <div class="col-10 col-sm-5 mb-3 mt-3 mx-lg-2">
+                        <label for="c_inputCustId" class="form-label"
+                          >Customer Address:</label
+                        >
+                        <input
+                          class="form-control border-1 rounded-2"
+                          type="text"
+                          id="c_inputCustId"
+                          placeholder
+                          style="border: 2px solid green"
+                        />
+
+                        <label
+                          class="text-danger mt-3 err-label"
+                          style="font-size: 12px; display: none"
+                          >Error</label
+                        >
+                      </div>
+                      <div class="col-10 col-sm-5 mb-3 mt-3 mx-lg-2">
+                        <label for="c_inputCustId" class="form-label"
+                          >Customer Contact:</label
+                        >
+                        <input
+                          class="form-control border-1 rounded-2"
+                          type="text"
+                          id="c_inputCustId"
+                          placeholder
+                          style="border: 2px solid green"
+                        />
+
+                        <label
+                          class="text-danger mt-3 err-label"
+                          style="font-size: 12px; display: none"
+                          >Error</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="container-fluid mt-4 w-100 mb-5 px-5"
+                    style="height: max-content"
+                  >
+                    <div class="row w-100">
+                      <div class="col-4 col-md-3 text-center py-2" id="btn">
+                        <button class="btn w-100 h-100 btn-light">Save</button>
+                      </div>
+                      <div class="col-4 col-md-3 text-center py-2" id="btn">
+                        <button class="btn w-100 h-100 btn-light">
+                          Update
+                        </button>
+                      </div>
+                      <div class="col-4 col-md-3 text-center py-2" id="btn">
+                        <button class="btn w-100 h-100 btn-light">
+                          Delete
+                        </button>
+                      </div>
+                      <div class="col-4 col-md-3 text-center py-2" id="btn">
+                        <button class="btn w-100 h-100 btn-light">Clear</button>
+                      </div>
+                    </div>
+
+                    <div class="row w-100">
+                      <div
+                        class="col-6 col-md-6 text-center py-2 mt-4"
+                        id="sub-btn"
+                      >
+                        <button class="btn w-100 h-80 btn-light">
+                          New Customer
+                        </button>
+                      </div>
+                      <div
+                        class="col-6 col-md-6 text-center py-2 mt-4"
+                        id="sub-btn"
+                      >
+                        <button class="btn w-100 h-80 btn-light">
+                          View All Customers
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="container border mt-5 rounded-2 border-success bg-body-secondary"
+            >
+              <div class="row justify-content-center mb-5">
+                <div class="col-10 mt-5">
+                  <label for="">Find Customer:</label>
+                </div>
+                <form
+                  role="search"
+                  class="d-flex justify-content-center mt-3 gap-3"
+                >
+                  <div class="col-7 col-md-8">
+                    <input
+                      type="search"
+                      placeholder="search"
+                      aria-label="search"
+                      class="form-control me-2"
+                    />
+                  </div>
+
+                  <div class="col-3 col-md-2">
+                    <button class="btn btn-outline-success w-100">
+                      Search
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
             <table
               class="table table-hover m-auto w-90 mt-5 table-responsive table-bordered"
               id="table"
             >
               <thead id="cus-table">
                 <tr>
-                  <th>Customer Name</th>
-                  <th>Age</th>
-                  <th>Telephone</th>
-                  <th>Salary</th>
+                  <th>Customer ID</th>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Contact</th>
                 </tr>
               </thead>
               <tbody class="table-secondary" id="c-tb">
@@ -143,7 +297,279 @@
         <div></div>
       </main>
     </section>
-    <section></section>
+    <section id="item-section">
+      <header class="position-fixed top-0 w-100">
+        <nav
+          class="navbar navbar-expand-lg shadow p-3 bg-body-tertiary rounded"
+        >
+          <div class="container-fulid mx-5">
+            <img
+              src="/assets/images/11zon_cropped.png"
+              alt="logo"
+              style="width: 3rem; height: 3rem; border-radius: 50%"
+            />
+          </div>
+          <div class="collapse navbar-collapse" style="justify-content: center">
+            <ul class="navbar-nav mb-2 column-gap-5" id="header-links">
+              <li class="nav-item">
+                <a href="#" aria-current="page" class="nav-link active">Home</a>
+              </li>
+              <li>
+                <a href="#" aria-current="page" class="nav-link active"
+                  >Customers</a
+                >
+              </li>
+              <li>
+                <a href="#" aria-current="page" class="nav-link active"
+                  >Items</a
+                >
+              </li>
+              <li>
+                <a href="#" aria-current="page" class="nav-link active"
+                  >Orders</a
+                >
+              </li>
+              <li>
+                <a href="#" aria-current="page" class="nav-link active"
+                  >Place Order</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="collapse navbar-collapse"
+            style="justify-content: flex-end"
+          >
+            <ul class="navbar-nav mb-2 ml-auto" id="sign-login">
+              <li>
+                <a href="#" href="#" aria-current="page" class="nav-link active"
+                  ><i class="fa-solid fa-user-plus"></i>Sign up</a
+                >
+              </li>
+              <li>
+                <a href="#" aria-current="page" class="nav-link active"
+                  ><i class="fa-solid fa-right-from-bracket"></i>Log out</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div style="margin-top: 100px">
+          <div
+            class="container p-3 mb-2 bg-body-tertiary shadow p-3 mb-5 bg-body-tertiary rounded"
+            id="content-box"
+          >
+            <div class="accordion">
+              <div class="accordion-item rounded-bottom-3" id="topic">
+                <h2 class="text-light-emphasis text-center">Manage Items</h2>
+                <div class="accordion-collapse collapse show">
+                  <div class="container-fluid">
+                    <div class="row w-100 justify-content-center mx-auto mt-4">
+                      <div class="col-10 col-sm-5 mb-3 mt-3 mx-lg-2">
+                        <label for="c_inputCustId" class="form-label"
+                          >Item ID:</label
+                        >
+                        <input
+                          class="form-control border-1 rounded-2"
+                          type="text"
+                          id="c_inputCustId"
+                          placeholder
+                          style="border: 2px solid green"
+                        />
+
+                        <label
+                          class="text-danger mt-3 err-label"
+                          style="font-size: 12px; display: none"
+                          >Error</label
+                        >
+                      </div>
+                      <div class="col-10 col-sm-5 mb-3 mt-3 mx-lg-2">
+                        <label for="c_inputCustId" class="form-label"
+                          >Item Name:</label
+                        >
+                        <input
+                          class="form-control border-1 rounded-2"
+                          type="text"
+                          id="c_inputCustId"
+                          placeholder
+                          style="border: 2px solid green"
+                        />
+
+                        <label
+                          class="text-danger mt-3 err-label"
+                          style="font-size: 12px; display: none"
+                          >Error</label
+                        >
+                      </div>
+                      <div class="col-10 col-sm-5 mb-3 mt-3 mx-lg-2">
+                        <label for="c_inputCustId" class="form-label"
+                          >Quantity:</label
+                        >
+                        <input
+                          class="form-control border-1 rounded-2"
+                          type="text"
+                          id="c_inputCustId"
+                          placeholder
+                          style="border: 2px solid green"
+                        />
+
+                        <label
+                          class="text-danger mt-3 err-label"
+                          style="font-size: 12px; display: none"
+                          >Error</label
+                        >
+                      </div>
+                      <div class="col-10 col-sm-5 mb-3 mt-3 mx-lg-2">
+                        <label for="c_inputCustId" class="form-label"
+                          >Price:</label
+                        >
+                        <input
+                          class="form-control border-1 rounded-2"
+                          type="text"
+                          id="c_inputCustId"
+                          placeholder
+                          style="border: 2px solid green"
+                        />
+
+                        <label
+                          class="text-danger mt-3 err-label"
+                          style="font-size: 12px; display: none"
+                          >Error</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="container-fluid mt-4 w-100 mb-5 px-5"
+                    style="height: max-content"
+                  >
+                    <div class="row w-100">
+                      <div class="col-4 col-md-3 text-center py-2" id="btn">
+                        <button class="btn w-100 h-100 btn-light">Save</button>
+                      </div>
+                      <div class="col-4 col-md-3 text-center py-2" id="btn">
+                        <button class="btn w-100 h-100 btn-light">
+                          Update
+                        </button>
+                      </div>
+                      <div class="col-4 col-md-3 text-center py-2" id="btn">
+                        <button class="btn w-100 h-100 btn-light">
+                          Delete
+                        </button>
+                      </div>
+                      <div class="col-4 col-md-3 text-center py-2" id="btn">
+                        <button class="btn w-100 h-100 btn-light">Clear</button>
+                      </div>
+                    </div>
+
+                    <div class="row w-100">
+                      <div
+                        class="col-6 col-md-6 text-center py-2 mt-4"
+                        id="sub-btn"
+                      >
+                        <button class="btn w-100 h-80 btn-light">
+                          New Item
+                        </button>
+                      </div>
+                      <div
+                        class="col-6 col-md-6 text-center py-2 mt-4"
+                        id="sub-btn"
+                      >
+                        <button class="btn w-100 h-80 btn-light">
+                          View All Items
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="container border mt-5 rounded-2 border-success bg-body-secondary"
+            >
+              <div class="row justify-content-center mb-5">
+                <div class="col-10 mt-5">
+                  <label for="">Find Item:</label>
+                </div>
+                <form
+                  role="search"
+                  class="d-flex justify-content-center mt-3 gap-3"
+                >
+                  <div class="col-7 col-md-8">
+                    <input
+                      type="search"
+                      placeholder="search"
+                      aria-label="search"
+                      class="form-control me-2"
+                    />
+                  </div>
+
+                  <div class="col-3 col-md-2">
+                    <button class="btn btn-outline-success w-100">
+                      Search
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <table
+              class="table table-hover m-auto w-90 mt-5 table-responsive table-bordered"
+              id="table"
+            >
+              <thead id="cus-table">
+                <tr>
+                  <th>Item ID</th>
+                  <th>Item Name</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody class="table-secondary" id="c-tb">
+                <tr>
+                  <td>I001</td>
+                  <td>Roses</td>
+                  <td>100</td>
+                  <td>100000.00</td>
+                </tr>
+                <tr>
+                  <td>I002</td>
+                  <td>Orchid</td>
+                  <td>50</td>
+                  <td>50000.00</td>
+                </tr>
+                <tr>
+                  <td>I003</td>
+                  <td>Deliya</td>
+                  <td>250</td>
+                  <td>90000.00</td>
+                </tr>
+                <tr>
+                  <td>I004</td>
+                  <td>Lavender</td>
+                  <td>300</td>
+                  <td>190000.00</td>
+                </tr>
+                <tr>
+                  <td>I005</td>
+                  <td>Lily</td>
+                  <td>200</td>
+                  <td>80000.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div></div>
+        </div>
+
+        <div></div>
+      </main>
+    </section>
     <section></section>
     <section></section>
     <script
