@@ -57,7 +57,12 @@
               <a href="#" aria-current="page" class="nav-link active">Orders</a>
             </li>
             <li>
-              <a href="#" aria-current="page" class="nav-link">Place Order</a>
+              <a
+                href="/pages/placeorder.html"
+                aria-current="page"
+                class="nav-link"
+                >Place Order</a
+              >
             </li>
           </ul>
         </div>
@@ -80,12 +85,13 @@
     </header>
 
     <div
-      class="container border rounded-5 border-success bg-secondary-subtle"
+      class="container border rounded-5 border-black bg-secondary-subtle"
       style="margin-top: 100px"
     >
+      <h2 class="text-light-emphasis text-center">Manage Orders</h2>
       <div class="row justify-content-center mb-5">
         <div class="col-10 mt-5">
-          <label class=" " style="">Find the Order:</label>
+          <label class=" " style="color: #474747">Find the Order:</label>
         </div>
         <form class="d-flex justify-content-center mt-3 gap-3" role="search">
           <div class="col-7 col-md-8">
@@ -96,10 +102,8 @@
               id="od_inputOrderId"
             />
           </div>
-          <div class="col-3 col-md-2">
-            <button class="btn btn-outline-success w-100" id="od_btnGetDetails">
-              Get Details
-            </button>
+          <div class="col-3 col-md-2" id="get-btn">
+            <button class="btn w-100" id="od_btnGetDetails">Get Details</button>
           </div>
         </form>
       </div>

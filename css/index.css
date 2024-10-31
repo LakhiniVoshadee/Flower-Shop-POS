@@ -68,3 +68,65 @@ body {
 #c-tb tr td {
   color: #474747;
 }
+
+#Purchase-btn button {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #ea809e;
+}
+
+#Purchase-btn button:hover {
+  background-color: #ea809ec9;
+}
+
+#add-btn button {
+  font-family: "Poppins", sans-serif;
+  font-size: bold;
+  color: #474747;
+  background-color: #b6b6b6;
+}
+
+#add-btn button:hover {
+  background-color: #ea809e;
+  color: white;
+  transform: scale(1.1);
+}
+
+#get-btn button {
+  font-family: "Poppins", sans-serif;
+  font-size: bold;
+  color: #474747;
+  background-color: #b6b6b6;
+}
+
+#get-btn button:hover {
+  background-color: #ea809e;
+  color: white;
+  transform: scale(1.1);
+}
+
+#search-btn button {
+  font-family: "Poppins", sans-serif;
+  font-size: bold;
+  color: #474747;
+  background-color: #b6b6b6;
+}
+
+#search-btn button:hover {
+  background-color: #ea809e;
+  color: white;
+  transform: scale(1.1);
+}
+
+#find-btn button {
+  font-family: "Poppins", sans-serif;
+  font-size: bold;
+  color: #474747;
+  background-color: #b6b6b6;
+}
+
+#find-btn button:hover {
+  background-color: #ea809e;
+  color: white;
+  transform: scale(1.1);
+}

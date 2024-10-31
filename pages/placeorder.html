@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Place Order</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="/assets/images/11zon_cropped.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+  </head>
+  <body>
+    <header class="position-fixed top-0 w-100">
+      <nav class="navbar navbar-expand-lg shadow p-3 bg-body-tertiary rounded">
+        <div class="container-fulid mx-5">
+          <img
+            src="/assets/images/11zon_cropped.png"
+            alt="logo"
+            style="width: 3rem; height: 3rem; border-radius: 50%"
+          />
+        </div>
+        <div class="collapse navbar-collapse" style="justify-content: center">
+          <ul class="navbar-nav mb-2 column-gap-5" id="header-links">
+            <li class="nav-item">
+              <a href="/index.html" aria-current="page" class="nav-link"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/pages/customer.html"
+                aria-current="page"
+                class="nav-link"
+                >Customers</a
+              >
+            </li>
+            <li>
+              <a href="/pages/item.html" aria-current="page" class="nav-link"
+                >Items</a
+              >
+            </li>
+            <li>
+              <a href="/pages/order.html" aria-current="page" class="nav-link"
+                >Orders</a
+              >
+            </li>
+            <li>
+              <a href="#" aria-current="page" class="nav-link active"
+                >Place Order</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="collapse navbar-collapse" style="justify-content: flex-end">
+          <ul class="navbar-nav mb-2 ml-auto" id="sign-login">
+            <li>
+              <a href="#" href="#" aria-current="page" class="nav-link active"
+                ><i class="fa-solid fa-user-plus"></i>Sign up</a
+              >
+            </li>
+            <li>
+              <a href="#" aria-current="page" class="nav-link active"
+                ><i class="fa-solid fa-right-from-bracket"></i>Log out</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section id="placeorder">
+      <main>
+        <div style="margin-top: 100px">
+          <div
+            class="container p-3 mb-2 bg-body-tertiary shadow p-3 mb-5 bg-body-tertiary rounded"
+          >
+            <h2 class="text-light-emphasis text-center">Place Orders</h2>
+            <div class="row w-100 justify-content-center mx-auto">
+              <div class="col-10 col-sm-5 col-md-3 mt-3 mb-md-0">
+                <label for="" class="form-label" style="color: #474747"
+                  >Order ID:</label
+                >
+                <input type="text" class="form-control border-black" />
+              </div>
+              <div class="col-10 col-sm-5 col-md-3 mt-3 mb-md-0">
+                <label for="" class="form-label" style="color: #474747"
+                  >Order Date:</label
+                >
+                <input type="date" class="form-control border-black" />
+              </div>
+              <div class="col-10 col-sm-5 col-md-3 mt-3 mb-md-0">
+                <label for="" class="form-label" style="color: #474747"
+                  >Customer ID:</label
+                >
+                <select class="form-select border-black">
+                  <option>C001</option>
+                  <option>C002</option>
+                  <option>C003</option>
+                  <option>C004</option>
+                </select>
+              </div>
+
+              <div class="col-10 col-md-9 mb-0 mt-3">
+                <label for="" class="from=form-label" style="color: #474747"
+                  >Customer Name:</label
+                >
+                <label for="" class="from=form-label"></label>
+              </div>
+
+              <div class="col-10 col-md-9 mb-0 mt-3">
+                <label for="" class="from=form-label" style="color: #474747"
+                  >Customer Contact:</label
+                >
+                <label for="" class="from=form-label"></label>
+              </div>
+
+              <div class="col-10 col-md-9 mb-0 mb-4 mt-3">
+                <label for="" class="form-label" style="color: #474747"
+                  >Item Code:</label
+                >
+                <select name="" class="form-select border-black">
+                  <option>I001</option>
+                  <option>I002</option>
+                  <option>I003</option>
+                  <option>I004</option>
+                </select>
+              </div>
+
+              <div class="col-10 col-md-9 mb-0 mt-3">
+                <label for="" class="from=form-label" style="color: #474747"
+                  >Item Name:</label
+                >
+                <label for="" class="from=form-label"></label>
+              </div>
+              <div class="col-10 col-md-9 mb-0 mt-3">
+                <label for="" class="from=form-label" style="color: #474747"
+                  >Price:</label
+                >
+                <label for="" class="from=form-label"></label>
+              </div>
+              <div class="col-10 col-md-9 mb-0 mt-3">
+                <label for="" class="from=form-label" style="color: #474747"
+                  >Available Items:</label
+                >
+                <label for="" class="from=form-label"></label>
+              </div>
+
+              <div class="col-10 col-md-9 mb-2 mt-3">
+                <label for="" class="from=form-label" style="color: #474747"
+                  >Quantity:</label
+                >
+                <input
+                  type="number"
+                  class="form-control border-black"
+                  style="width: 40%"
+                />
+              </div>
+
+              <div class="col-10 col-md-9 mb-0 mt-3" id="add-btn">
+                <button class="btn w-80 h-100">Add TO Cart</button>
+              </div>
+
+              <div class="col-10 col-md-9 mb-0 mt-3 overflow-x-scroll">
+                <table
+                  class="table table-responsive table-hover mt-3 mb-4 table-bordered w-100"
+                >
+                  <thead>
+                    <tr class="table-light">
+                      <th>Item Code</th>
+                      <th>Item Name</th>
+                      <th>Unit Price</th>
+                      <th>Quantity</th>
+                      <th>Total</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+
+              <div class="col-10 col-md-9 mb-0 mt-5 text-center">
+                <label for="" class="form-label fs-1">Total:</label>
+                <label for=""></label>
+              </div>
+
+              <div class="col-10 col-md-9 mb-3 mt-0 text-center">
+                <label for="" class="from-lable fs-4 text-secondary"
+                  >Sub Total:</label
+                >
+                <label for=""></label>
+              </div>
+
+              <div class="col-10 col-md-9 mb-0 mt-0">
+                <label for="" class="form-label" style="color: #474747"
+                  >Discount:</label
+                >
+                <input
+                  type="number"
+                  class="form-control w-75 border-black"
+                  placeholder=""
+                />
+              </div>
+              <div class="col-10 col-md-9 mb-0 mt-0">
+                <label for="" class="form-label" style="color: #474747"
+                  >Cash:</label
+                >
+                <input
+                  type="number"
+                  class="form-control w-75 border-black"
+                  placeholder=""
+                />
+              </div>
+              <div class="col-10 col-md-9 mb-0 mt-0">
+                <label for="" class="form-label" style="color: #474747"
+                  >Balance:</label
+                >
+                <input
+                  type="number"
+                  class="form-control w-75 border-black"
+                  placeholder=""
+                />
+              </div>
+
+              <div
+                class="row w-100 mb-5 justify-content-center mx-auto mt-4"
+                id="Purchase-btn"
+              >
+                <div class="col-10 col-md-9 text-center py-2">
+                  <button class="btn w-100 h-100">Purchase</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>
