@@ -33,31 +33,47 @@
         <div class="collapse navbar-collapse" style="justify-content: center">
           <ul class="navbar-nav mb-2 column-gap-5" id="header-links">
             <li class="nav-item">
-              <a href="#" aria-current="page" class="nav-link active">Home</a>
+              <a
+                href="#home-section"
+                aria-current="page"
+                class="nav-link active"
+                id="nav-home"
+                >Home</a
+              >
             </li>
             <li>
               <a
-                href="/pages/customer.html"
+                href="#customer-section"
                 aria-current="page"
                 class="nav-link"
+                id="nav-customer"
                 >Customers</a
               >
             </li>
             <li>
-              <a href="/pages/item.html" aria-current="page" class="nav-link"
+              <a
+                href="#item-section"
+                aria-current="page"
+                class="nav-link"
+                id="nav-item-link"
                 >Items</a
               >
             </li>
             <li>
-              <a href="/pages/order.html" aria-current="page" class="nav-link"
+              <a
+                href="#order-section"
+                aria-current="page"
+                class="nav-link"
+                id="nav-order"
                 >Orders</a
               >
             </li>
             <li>
               <a
-                href="/pages/placeorder.html"
+                href="#placeorder-section"
                 aria-current="page"
                 class="nav-link"
+                id="nav-place-order"
                 >Place Order</a
               >
             </li>
@@ -81,7 +97,7 @@
       </nav>
     </header>
 
-    <section id="home">
+    <section id="home-section">
       <main>
         <div style="margin-top: 100px">
           <div
@@ -320,38 +336,7 @@
                   <th>Contact</th>
                 </tr>
               </thead>
-              <tbody class="table-secondary" id="c-tb">
-                <tr>
-                  <td>Shachiru</td>
-                  <td>21</td>
-                  <td>0779276268</td>
-                  <td>100000.00</td>
-                </tr>
-                <tr>
-                  <td>Lakhini</td>
-                  <td>21</td>
-                  <td>0775234454</td>
-                  <td>100000.00</td>
-                </tr>
-                <tr>
-                  <td>Shan</td>
-                  <td>25</td>
-                  <td>0786655467</td>
-                  <td>90000.00</td>
-                </tr>
-                <tr>
-                  <td>Avindu</td>
-                  <td>23</td>
-                  <td>0765345987</td>
-                  <td>120000.00</td>
-                </tr>
-                <tr>
-                  <td>Vihanga</td>
-                  <td>22</td>
-                  <td>0724876444</td>
-                  <td>90000.00</td>
-                </tr>
-              </tbody>
+              <tbody class="table-secondary" id="c-tb"></tbody>
             </table>
           </div>
 
@@ -547,38 +532,7 @@
                   <th>Price</th>
                 </tr>
               </thead>
-              <tbody class="table-secondary" id="c-tb">
-                <tr>
-                  <td>I001</td>
-                  <td>Roses</td>
-                  <td>100</td>
-                  <td>100000.00</td>
-                </tr>
-                <tr>
-                  <td>I002</td>
-                  <td>Orchid</td>
-                  <td>50</td>
-                  <td>50000.00</td>
-                </tr>
-                <tr>
-                  <td>I003</td>
-                  <td>Deliya</td>
-                  <td>250</td>
-                  <td>90000.00</td>
-                </tr>
-                <tr>
-                  <td>I004</td>
-                  <td>Lavender</td>
-                  <td>300</td>
-                  <td>190000.00</td>
-                </tr>
-                <tr>
-                  <td>I005</td>
-                  <td>Lily</td>
-                  <td>200</td>
-                  <td>80000.00</td>
-                </tr>
-              </tbody>
+              <tbody class="table-secondary" id="c-tb"></tbody>
             </table>
           </div>
 
@@ -622,7 +576,7 @@
       </div>
     </section>
 
-    <section id="placeorder">
+    <section id="placeorder-section">
       <main>
         <div style="margin-top: 100px">
           <div
@@ -833,6 +787,16 @@
         </div>
       </main>
     </section>
+
+    <script src="/navigations.js"></script>
+    <script src="/db/database.js"></script>
+    <script src="/model/customerModel.js"></script>
+    <script src="/controller/customerController.js"></script>
+    <script src="/model/itemModel.js"></script>
+    <script src="/controller/itemController.js"></script>
+    <script src="/model/orderModel.js"></script>
+    <script src="/controller/orderController.js"></script>
+    <script src="/model/placeOrderModel.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

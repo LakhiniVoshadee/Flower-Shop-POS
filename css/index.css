@@ -29,7 +29,11 @@ header {
   color: #ea809e;
   transform: scale(1.1);
 }
-#home {
+
+section {
+  display: none;
+}
+#home-section {
   margin-top: 2rem;
 }
 
@@ -41,7 +45,7 @@ header {
   opacity: 0.7;
 }
 
-#home h2 {
+#home-section h2 {
   font-size: 1.9rem;
 }
 
@@ -65,11 +69,11 @@ header {
 .right-box p {
   color: #272727;
 }
-#home .count-container {
+#home-section .count-container {
   display: flex;
   margin-top: 3rem;
 }
-#home .count-box {
+#home-section .count-box {
   width: 18rem;
   height: 10rem;
   background-color: #ea809ec5;
@@ -79,14 +83,14 @@ header {
   box-shadow: 4px 8px 10px gray;
 }
 
-#home .count-box h1 {
+#home-section .count-box h1 {
   margin-top: 1rem;
   font-size: 1rem;
   color: #000000;
   opacity: 1;
 }
 
-#home .count-box h1 .fa {
+#home-section .count-box h1 .fa {
   color: black;
   margin-left: 3rem;
   font-size: 2rem;
