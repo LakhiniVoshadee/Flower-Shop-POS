@@ -34,25 +34,25 @@ var customerDB = [
 
 var itemDB = [
   {
-    id: "I00-001",
+    item_id: "I00-001",
     name: "Lily",
     quantity: 10,
     price: 9.99,
   },
   {
-    id: "I00-002",
+    item_id: "I00-002",
     name: "Rose",
     quantity: 5,
     price: 19.99,
   },
   {
-    id: "I00-003",
+    item_id: "I00-003",
     name: "Sunflower",
     quantity: 15,
     price: 14.99,
   },
   {
-    id: "I00-004",
+    item_id: "I00-004",
     name: "Tulip",
     quantity: 8,
     price: 24.99,

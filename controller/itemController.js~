@@ -7,16 +7,14 @@ $("#item_clear").click(function (event) {
 });
 
 //save btn action
-$("#item_save").click(function (event) {
-    event.preventDefault();
+$("#item_save").click(function () {
     saveItem();
     getAllItems();
     clearItemTxtFields();
 });
 
 //update btn action
-$("#item_update").click(function ( event) {
-    event.preventDefault();
+$("#item_update").click(function () {
     let id = $("#item_id").val();
     updateItem(id.trim());
     getAllItems();
@@ -24,8 +22,7 @@ $("#item_update").click(function ( event) {
 });
 
 //delete btn action
-$("#item_delete").click(function (event) {
-    event.preventDefault();
+$("#item_delete").click(function () {
     let id = $("#item_id").val();
     deleteItem(id.trim());
     getAllItems();
@@ -33,8 +30,7 @@ $("#item_delete").click(function (event) {
 });
 
 //search btn action
-$("#btnSearchItem").click(function (event) {
-    event.preventDefault();
+$("#btnSearchItem").click(function () {
     let itmId = $("#txtItemSearch").val();
 
     let item = findItem(itmId.trim());
