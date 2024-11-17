@@ -191,7 +191,7 @@
                                             class="text-danger mt-3 err-label"
                                             style="font-size: 13px; display: none"
                                     >Invalid Customer Name.Enter at least 4 characters.
-
+                                        Allowed
                                     </label>
                                 </div>
                                 <div class="col-10 col-sm-5 mb-3 mt-3 mx-lg-2">
@@ -394,7 +394,7 @@
                                         <label
                                                 class="text-danger mt-3 err-label"
                                                 style="font-size: 12px; display: none"
-                                        >Invalid Item ID. Format: I00-000.</label
+                                        >Error</label
                                         >
                                     </div>
                                     <div class="col-10 col-sm-5 mb-3 mt-3 mx-lg-2">
@@ -415,8 +415,7 @@
                                         <label
                                                 class="text-danger mt-3 err-label"
                                                 style="font-size: 12px; display: none"
-                                        >Invalid Item Name.Enter at least 4 characters.
-                                            </label
+                                        >Error</label
                                         >
                                     </div>
                                     <div class="col-10 col-sm-5 mb-3 mt-3 mx-lg-2">
@@ -437,7 +436,7 @@
                                         <label
                                                 class="text-danger mt-3 err-label"
                                                 style="font-size: 12px; display: none"
-                                        >Invalid quantity. </label
+                                        >Error</label
                                         >
                                     </div>
                                     <div class="col-10 col-sm-5 mb-3 mt-3 mx-lg-2">
@@ -458,7 +457,7 @@
                                         <label
                                                 class="text-danger mt-3 err-label"
                                                 style="font-size: 12px; display: none"
-                                        >Invalid price.</label
+                                        >Error</label
                                         >
                                     </div>
                                 </div>
