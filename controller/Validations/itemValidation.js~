@@ -1,20 +1,20 @@
 // validation for customers
 const ITEM_CODE_REGEX = /^(I00-)[0-9]{3}$/;
 const ITEM_NAME_REGEX = /^.{3,}$/;
-const QTY_REGEX = /^\d+(\.\d{1,2})?$/;
 const UNIT_PRICE_REGEX = /\d+(\.\d{1,2})/;
+const QTY_REGEX = /^\d+(\.\d{1,2})?$/;
 
 //add validations and text fields to the
 let i_validationArray = new Array();
-i_validationArray.push({field: $("#item_id"), regEx: ITEM_CODE_REGEX});
-i_validationArray.push({field: $("#item_name"), regEx: ITEM_NAME_REGEX});
-i_validationArray.push({field: $("#item_quantity"), regEx: QTY_REGEX});
-i_validationArray.push({field: $("#item_price"), regEx: UNIT_PRICE_REGEX});
+i_validationArray.push({field: $("#inputItemCode"), regEx: ITEM_CODE_REGEX});
+i_validationArray.push({field: $("#inputItemName"), regEx: ITEM_NAME_REGEX});
+i_validationArray.push({field: $("#inputItemUnitPrice"), regEx: UNIT_PRICE_REGEX});
+i_validationArray.push({field: $("#inputItemQtyOnHand"), regEx: QTY_REGEX});
 
 setItemBtn();
 $(".i_err-label").css("display", "none");
 
-$("#item_id,#item_name,#item_quantity,#item_price").on("keydown keyup", function (e) {
+$("#inputItemCode,#inputItemName,#inputItemUnitPrice,#inputItemQtyOnHand").on("keydown keyup", function (e) {
     let indexNo = i_validationArray.indexOf(i_validationArray.find((i) => i.field.attr("id") == e.target.id));
 
     if (e.key == "Tab") {
@@ -66,18 +66,18 @@ function setItemBorder(bool, ob) {
 
 function setItemBtn() {
     if (itemCheckAll()) {
-        $("#item_save").prop("disabled", false);
-        $("#item_update").prop("disabled", false);
+        $("#i_btnSave").prop("disabled", false);
+        $("#i_btnUpdate").prop("disabled", false);
     } else {
-        $("#item_save").prop("disabled", true);
-        $("#item_update").prop("disabled", true);
+        $("#i_btnSave").prop("disabled", true);
+        $("#i_btnUpdate").prop("disabled", true);
     }
 
-    let id = $("#item_id").val();
+    let id = $("#inputItemCode").val();
     if (findItem(id) == undefined) {
-        $("#item_delete").prop("disabled", true);
+        $("#i_btnDelete").prop("disabled", true);
     } else {
-        $("#item_delete").prop("disabled", false);
+        $("#i_btnDelete").prop("disabled", false);
     }
 }
 
