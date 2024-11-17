@@ -60,15 +60,7 @@
                     >Items</a
                     >
                 </li>
-                <li>
-                    <a
-                            href="#order-section"
-                            aria-current="page"
-                            class="nav-link"
-                            id="nav-order"
-                    >Orders</a
-                    >
-                </li>
+
                 <li>
                     <a
                             href="#placeorder-section"
@@ -319,7 +311,7 @@
             >
                 <div class="row justify-content-center mb-5">
                     <div class="col-10 mt-5">
-                        <label  style="font-family: Poppins, sans-serif"
+                        <label style="font-family: Poppins, sans-serif"
                         >Find Customer:</label
                         >
                     </div>
@@ -477,24 +469,24 @@
                                     style="height: max-content"
                             >
                                 <div class="row w-100">
-                                  <form class="row w-100">
-                                      <div class="col-4 col-md-3 text-center py-2" id="item_save_btn">
-                                          <button class="btn w-100 h-100 btn-light" id="item_save">Save</button>
-                                      </div>
-                                      <div class="col-4 col-md-3 text-center py-2" id="item_update_btn">
-                                          <button class="btn w-100 h-100 btn-light" id="item_update">
-                                              Update
-                                          </button>
-                                      </div>
-                                      <div class="col-4 col-md-3 text-center py-2" id="item_delete_btn">
-                                          <button class="btn w-100 h-100 btn-light" id="item_delete">
-                                              Delete
-                                          </button>
-                                      </div>
-                                      <div class="col-4 col-md-3 text-center py-2" id="item_clear_btn">
-                                          <button class="btn w-100 h-100 btn-light" id="item_clear">Clear</button>
-                                      </div>
-                                  </form>
+                                    <form class="row w-100">
+                                        <div class="col-4 col-md-3 text-center py-2" id="item_save_btn">
+                                            <button class="btn w-100 h-100 btn-light" id="item_save">Save</button>
+                                        </div>
+                                        <div class="col-4 col-md-3 text-center py-2" id="item_update_btn">
+                                            <button class="btn w-100 h-100 btn-light" id="item_update">
+                                                Update
+                                            </button>
+                                        </div>
+                                        <div class="col-4 col-md-3 text-center py-2" id="item_delete_btn">
+                                            <button class="btn w-100 h-100 btn-light" id="item_delete">
+                                                Delete
+                                            </button>
+                                        </div>
+                                        <div class="col-4 col-md-3 text-center py-2" id="item_clear_btn">
+                                            <button class="btn w-100 h-100 btn-light" id="item_clear">Clear</button>
+                                        </div>
+                                    </form>
 
 
                                 </div>
@@ -528,7 +520,7 @@
                 >
                     <div class="row justify-content-center mb-5">
                         <div class="col-10 mt-5">
-                            <label  style="font-family: Poppins, sans-serif"
+                            <label style="font-family: Poppins, sans-serif"
                             >Find Item:</label
                             >
                         </div>
@@ -547,19 +539,19 @@
                             </div>
 
                             <div class="col-3 col-md-2" id="search-btn">
-                                <button class="btn w-100"  id="btnSearchItem">Search</button>
+                                <button class="btn w-100" id="btnSearchItem">Search</button>
                             </div>
                         </form>
                     </div>
                 </div>
 
-<!--               -------------------------- Item Table------------------------------------------------->
+                <!--               -------------------------- Item Table------------------------------------------------->
                 <table
                         class="table table-hover m-auto w-90 mt-5 table-responsive table-bordered"
                         id="item_table"
                 >
                     <thead id="it-table">
-                    <tr >
+                    <tr>
                         <th scope="col">Item ID</th>
                         <th scope="col">Item Name</th>
                         <th scope="col">Quantity</th>
@@ -577,39 +569,6 @@
     </main>
 </section>
 
-<section id="order-section">
-    <div
-            class="container border rounded-5 border-black bg-secondary-subtle"
-            style="margin-top: 100px"
-    >
-        <h2 class="text-light-emphasis text-center">Manage Orders</h2>
-        <div class="row justify-content-center mb-5">
-            <div class="col-10 mt-5">
-                <label
-                        class=" "
-                        style="color: #474747; font-family: Poppins, sans-serif"
-                >Find the Order:</label
-                >
-            </div>
-            <form class="d-flex justify-content-center mt-3 gap-3" role="search">
-                <div class="col-7 col-md-8">
-                    <input
-                            aria-label="Search"
-                            class="form-control me-2"
-                            placeholder="Enter Order ID"
-                            id="od_inputOrderId"
-                    />
-                </div>
-                <div class="col-3 col-md-2" id="get-btn">
-                    <button class="btn w-100" id="od_btnGetDetails">
-                        Get Details
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-
 <section id="placeorder-section">
     <main>
         <div style="margin-top: 100px">
@@ -620,45 +579,45 @@
                 <div class="row w-100 justify-content-center mx-auto">
                     <div class="col-10 col-sm-5 col-md-3 mt-3 mb-md-0">
                         <label
-
+                                for="order_id"
                                 class="form-label"
                                 style="color: #474747; font-family: Poppins, sans-serif"
                         >Order ID:</label
                         >
-                        <input type="text" class="form-control border-black"/>
+                        <input type="text" class="form-control border-black" id="order_id"/>
                     </div>
                     <div class="col-10 col-sm-5 col-md-3 mt-3 mb-md-0">
                         <label
-
+                                for="order_date"
                                 class="form-label"
                                 style="color: #474747; font-family: Poppins, sans-serif"
                         >Order Date:</label
                         >
-                        <input type="date" class="form-control border-black"/>
+                        <input type="date" class="form-control border-black" id="order_date"/>
                     </div>
                     <div class="col-10 col-sm-5 col-md-3 mt-3 mb-md-0">
                         <label
-
+                                for="cus_order_id"
                                 class="form-label"
                                 style="color: #474747; font-family: Poppins, sans-serif"
                         >Customer ID:</label
                         >
-                        <select class="form-select border-black">
-                            <option>C001</option>
-                            <option>C002</option>
-                            <option>C003</option>
-                            <option>C004</option>
+                        <select class="form-select border-black" id="cus_order_id">
+<!--                            <option>C001</option>-->
+<!--                            <option>C002</option>-->
+<!--                            <option>C003</option>-->
+<!--                            <option>C004</option>-->
                         </select>
                     </div>
 
                     <div class="col-10 col-md-9 mb-0 mt-3">
                         <label
-
+                                for="cus_order_name"
                                 class="from=form-label"
                                 style="color: #474747; font-family: Poppins, sans-serif"
                         >Customer Name:</label
                         >
-                        <label  class="from=form-label"></label>
+                        <label class="from=form-label" id="cus_order_name"></label>
                     </div>
 
                     <div class="col-10 col-md-9 mb-0 mt-3">
@@ -668,21 +627,21 @@
                                 style="color: #474747; font-family: Poppins, sans-serif"
                         >Customer Contact:</label
                         >
-                        <label class="from=form-label"></label>
+                        <label class="from=form-label" id="cus_order_contact"></label>
                     </div>
 
                     <div class="col-10 col-md-9 mb-0 mb-4 mt-3">
                         <label
-
+                                for="item_order_id"
                                 class="form-label"
                                 style="color: #474747; font-family: Poppins, sans-serif"
                         >Item Code:</label
                         >
-                        <select name="" class="form-select border-black">
-                            <option>I001</option>
-                            <option>I002</option>
-                            <option>I003</option>
-                            <option>I004</option>
+                        <select name="" class="form-select border-black" id="item_order_id">
+<!--                            <option>I001</option>-->
+<!--                            <option>I002</option>-->
+<!--                            <option>I003</option>-->
+<!--                            <option>I004</option>-->
                         </select>
                     </div>
 
@@ -693,7 +652,7 @@
                                 style="color: #474747; font-family: Poppins, sans-serif"
                         >Item Name:</label
                         >
-                        <label class="from=form-label"></label>
+                        <label class="from=form-label" id="order_lbl_item_name"></label>
                     </div>
                     <div class="col-10 col-md-9 mb-0 mt-3">
                         <label
@@ -702,7 +661,7 @@
                                 style="color: #474747; font-family: Poppins, sans-serif"
                         >Price:</label
                         >
-                        <label class="from=form-label"></label>
+                        <label class="from=form-label" id="order_lbl_item_price"></label>
                     </div>
                     <div class="col-10 col-md-9 mb-0 mt-3">
                         <label
@@ -711,12 +670,12 @@
                                 style="color: #474747; font-family: Poppins, sans-serif"
                         >Available Items:</label
                         >
-                        <label  class="from=form-label"></label>
+                        <label class="from=form-label" id="order_lbl_item_available"></label>
                     </div>
 
                     <div class="col-10 col-md-9 mb-2 mt-3">
                         <label
-
+                                for="item_order_quantity"
                                 class="from=form-label"
                                 style="color: #474747; font-family: Poppins, sans-serif"
                         >Quantity:</label
@@ -725,16 +684,20 @@
                                 type="number"
                                 class="form-control border-black"
                                 style="width: 40%"
+                                id="item_order_quantity"
+                                min="1"
+                                placeholder=""
+
                         />
                     </div>
 
                     <div class="col-10 col-md-9 mb-0 mt-3" id="add-btn">
-                        <button class="btn w-80 h-100">Add TO Cart</button>
+                        <button class="btn w-80 h-100" id="btnAddToCart">Add TO Cart</button>
                     </div>
 
                     <div class="col-10 col-md-9 mb-0 mt-3 overflow-x-scroll">
                         <table
-                                class="table table-responsive table-hover mt-3 mb-4 table-bordered w-100"
+                                class="table table-responsive table-hover mt-3 mb-4 table-bordered w-100" id="tblOrder"
                         >
                             <thead>
                             <tr class="table-light">
@@ -745,6 +708,7 @@
                                 <th>Total</th>
                             </tr>
                             </thead>
+                            <tbody class="table-light" id="order_tablebody"></tbody>
                         </table>
                     </div>
 
@@ -755,7 +719,8 @@
                                 style="font-family: Poppins, sans-serif"
                         >Total:</label
                         >
-                        <label></label>
+                        <label class="form-label fs-1 text-danger"
+                               id="order_lbl_total"></label>
                     </div>
 
                     <div class="col-10 col-md-9 mb-3 mt-0 text-center">
@@ -765,7 +730,8 @@
                                 style="font-family: Poppins, sans-serif"
                         >Sub Total:</label
                         >
-                        <label ></label>
+                        <label class="form-label fs-4 text-secondary"
+                               id="order_lbl_subtotal"></label>
                     </div>
 
                     <div class="col-10 col-md-9 mb-0 mt-0">
@@ -773,12 +739,16 @@
 
                                 class="form-label"
                                 style="color: #474747; font-family: Poppins, sans-serif"
+                                for="order_input_discount"
                         >Discount:</label
                         >
                         <input
                                 type="number"
                                 class="form-control w-75 border-black"
                                 placeholder=""
+                                id="order_input_discount"
+                                min="0"
+                                max="100"
                         />
                     </div>
                     <div class="col-10 col-md-9 mb-0 mt-0">
@@ -786,12 +756,16 @@
 
                                 class="form-label"
                                 style="color: #474747; font-family: Poppins, sans-serif"
+                                for="order_input_cash"
                         >Cash:</label
                         >
                         <input
-                                type="number"
+                                type="text"
                                 class="form-control w-75 border-black"
                                 placeholder=""
+                                id="order_input_cash"
+                                min="0"
+                                max="100"
                         />
                     </div>
                     <div class="col-10 col-md-9 mb-0 mt-0">
@@ -799,12 +773,18 @@
 
                                 class="form-label"
                                 style="color: #474747; font-family: Poppins, sans-serif"
+                                for="order_input_balance"
                         >Balance:</label
                         >
                         <input
-                                type="number"
+                                type="text"
                                 class="form-control w-75 border-black"
                                 placeholder=""
+                                id="order_input_balance"
+                                min="0"
+                                max="100"
+                                placeholder=""
+                                disabled
                         />
                     </div>
 
@@ -813,7 +793,7 @@
                             id="Purchase-btn"
                     >
                         <div class="col-10 col-md-9 text-center py-2">
-                            <button class="btn w-100 h-100">Purchase</button>
+                            <button class="btn w-100 h-100" id="order_purchase_btn">Purchase</button>
                         </div>
                     </div>
                 </div>
@@ -831,14 +811,17 @@
 <script src="/controller/customerController.js"></script>
 <script src="/model/itemModel.js"></script>
 <script src="/controller/itemController.js"></script>
-<script src="/model/orderModel.js"></script>
-<script src="/controller/orderController.js"></script>
+<!--<script src="/model/orderModel.js"></script>-->
+<!--<script src="/controller/orderController.js"></script>-->
 <script src="/model/placeOrderModel.js"></script>
+<script src="/controller/placeOrderController.js"></script>
+
 
 <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"
 ></script>
+
 </body>
 </html>

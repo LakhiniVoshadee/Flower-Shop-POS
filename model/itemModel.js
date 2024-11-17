@@ -1,4 +1,4 @@
-let item={
+let item = {
     id: "",
     name: "",
     quantity: "",

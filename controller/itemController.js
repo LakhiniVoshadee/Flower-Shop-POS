@@ -15,7 +15,7 @@ $("#item_save").click(function (event) {
 });
 
 //update btn action
-$("#item_update").click(function ( event) {
+$("#item_update").click(function (event) {
     event.preventDefault();
     let id = $("#item_id").val();
     updateItem(id.trim());
@@ -39,17 +39,20 @@ $("#btnSearchItem").click(function (event) {
 
     let item = findItem(itmId.trim());
 
-    if(item == undefined){
+    if (item == undefined) {
         alert(`no item found with the code: ${itmId} . Please try again.`);
         $("#txtItemSearch").val("");
-    }else{
-        setDataToItemTxtFields(item.id,item.name,item.quantity,item.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+    } else {
+        setDataToItemTxtFields(item.id, item.name, item.quantity, item.price.toLocaleString(undefined, {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        }));
         $("#i_collapseOne").collapse("show");
         $("#txtItemSearch").val("");
     }
 })
 
-function clearItemTxtFields(){
+function clearItemTxtFields() {
     $("#item_id,#item_name,#item_quantity,#item_price").val("");
     $("#item_id,#item_name,#item_quantity,#item_price").addClass("border-secondary-subtle");
     setItemBtn();
@@ -59,7 +62,7 @@ function clearItemTxtFields(){
 function saveItem() {
     let itmCode = $("#item_id").val();
 
-    if(findItem(itmCode.trim()) == undefined ){
+    if (findItem(itmCode.trim()) == undefined) {
         let itmName = $("#item_name").val();
         let itmQty = $("#item_quantity").val();
         let itmUnitPrice = $("#item_price").val();
@@ -68,11 +71,11 @@ function saveItem() {
 
         newItem.id = itmCode;
         newItem.name = itmName;
-        newItem.quantity= itmQty;
+        newItem.quantity = itmQty;
         newItem.price = itmUnitPrice;
 
         itemDB.push(newItem);
-    }else{
+    } else {
         alert(`item with the code: ${itmCode} already exists.`);
     }
 }
@@ -80,11 +83,11 @@ function saveItem() {
 function updateItem(id) {
     let item = findItem(id);
 
-    if(item==undefined){
+    if (item == undefined) {
         alert(`No item with the code: ${id} . Please check the code again.`);
-    }else{
+    } else {
         let result = confirm("Confirm item details updating process?");
-        if(result){
+        if (result) {
             let itmName = $("#item_name").val();
             let itmQty = $("#item_quantity").val();
             let itmUnitPrice = $("#item_price").val();
@@ -100,11 +103,11 @@ function updateItem(id) {
 function deleteItem(id) {
     let item = findItem(id);
 
-    if(item==undefined){
+    if (item == undefined) {
         alert(`No item with the code: ${id} . Please check the code again.`);
-    }else{
+    } else {
         let result = confirm("Are you sure you want to remove this item?");
-        if(result){
+        if (result) {
             let status = "pending"
             for (let i = 0; i < itemDB.length; i++) {
                 if (itemDB[i].id == id) {
@@ -113,14 +116,14 @@ function deleteItem(id) {
                     alert("item deleted successfully")
                 }
             }
-            if(status == "pending"){
+            if (status == "pending") {
                 alert("item not removed")
             }
         }
     }
 }
 
-function findItem(id){
+function findItem(id) {
     return itemDB.find(function (item) {
         return item.id == id;
     });
@@ -133,7 +136,7 @@ function getAllItems() {
         let code = itemDB[i].id;
         let name = itemDB[i].name;
         let qty = itemDB[i].quantity;
-        let unitPrice = itemDB[i].price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        let unitPrice = itemDB[i].price.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 
 
         let row = `<tr>
@@ -168,16 +171,16 @@ function onTblItemRowClick() {
                     let name = row.children().eq(1).text();
                     let qty = row.children().eq(2).text();
                     let unitPrice = row.children().eq(3).text();
-                    setDataToItemTxtFields(code, name , qty,unitPrice);
+                    setDataToItemTxtFields(code, name, qty, unitPrice);
                     $("#i_collapseOne").collapse("show");
-                    $("#i_collapseOne")[0].scrollIntoView({ behavior: "smooth", block: "center" });
+                    $("#i_collapseOne")[0].scrollIntoView({behavior: "smooth", block: "center"});
                 }, 300); // Adjust the delay (300 milliseconds) as needed
             }
         }
     });
 }
 
-function setDataToItemTxtFields(code,name,qty,unitPrice){
+function setDataToItemTxtFields(code, name, qty, unitPrice) {
     $("#item_id").val(code);
     $("#item_name").val(name);
     $("#item_quantity").val(qty);
