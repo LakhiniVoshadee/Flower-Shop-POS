@@ -32,6 +32,9 @@ header {
     transform: scale(1.1);
 }
 
+section {
+    display: none;
+}
 
 #home-section {
     margin-top: 2rem;

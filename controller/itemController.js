@@ -9,7 +9,9 @@ $("#item_clear").click(function (event) {
 //save btn action
 $("#item_save").click(function (event) {
     event.preventDefault();
+    $("#item_id").empty();
     saveItem();
+    loadItemCodes();
     getAllItems();
     clearItemTxtFields();
 });

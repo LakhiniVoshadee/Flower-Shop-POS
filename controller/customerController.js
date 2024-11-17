@@ -8,8 +8,8 @@ $("#cus_clear").click(function () {
 //save btn action
 $("#cus_save").click(function () {
     saveCustomer();
-    // $("#o_inputCustId").empty();
-    // loadCustIds();
+    $("#cus_order_id").empty();
+    loadCustIds();
     getAllCustomers();
     clearTxtFields();
     setBtn();
