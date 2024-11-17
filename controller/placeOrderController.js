@@ -91,24 +91,23 @@ $("#btnAddToCart").click(function () {
     } else {
         alert("Please select an item first")
     }
+
+    finalTotal = 0;
+    $("#order_tablebody tr").each(function () {
+        let eachItemTotal = parseFloat($(this).find("td:eq(4)").text());
+        finalTotal = finalTotal + eachItemTotal;
+        $("#order_lbl_total").html("&nbsp;" + finalTotal + "/=");
+    });
+
+    let discount = $("#order_input_discount").val();
+    if (discount === "") {
+        subTotal = finalTotal;
+    } else {
+        let reduced_amount = (finalTotal / 100) * parseFloat(discount);
+        subTotal = finalTotal - reduced_amount;
+    }
+    $("#order_lbl_subtotal").html("&nbsp;" + subTotal + "/=");
 });
-
-finalTotal = 0;
-$("#order_tablebody tr").each(function () {
-    let eachItemTotal = parseFloat($(this).find("td:eq(4)").text());
-    finalTotal = finalTotal + eachItemTotal;
-    $("#order_lbl_total").html("&nbsp;" + finalTotal + "/=");
-});
-
-let discount = $("#order_input_discount").val();
-if (discount === "") {
-    subTotal = finalTotal;
-} else {
-    let reduced_amount = (finalTotal / 100) * parseFloat(discount);
-    subTotal = finalTotal - reduced_amount;
-}
-$("#order_lbl_subtotal").html("&nbsp;" + subTotal + "/=");
-
 
 $("#order_input_discount").on("keyup", function (e) {
     if (finalTotal == undefined) {
@@ -167,7 +166,7 @@ $("#Purchase-btn").click(function () {
 
                     orderDB.push(newOrder);
 
-                    alert("Order Placed Successfully")
+                    alert("Order Placed Successfully");
 
                     let nextOrderId = generateNextOrderID();
                     $("#order_id").val(nextOrderId);
